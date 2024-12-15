@@ -1,4 +1,4 @@
-// To open the elixir bash run : 
+// To open the elixir bash run :
 
 iex
 
@@ -6,11 +6,11 @@ iex
 
 "hello"
 
-// To add an atom 
+// To add an atom
 
 atom = ".."
 
-// Creating a map function 
+// Creating a map function
 
 // In Elixir, maps are the “go-to” key-value store. Unlike keyword lists, they allow keys of any type and are un-ordered. You can define a map with the %{} syntax:
 
@@ -105,7 +105,7 @@ list = [3.14, :pie, "Apple"]
 list ++ ["Cherry"]
 [3.14, :pie, "Apple", "Cherry"]
 
-// N/B : To hide the list from the output remove the "" from the N and use n alone 
+// N/B : To hide the list from the output remove the "" from the N and use n alone
 
 list = [3.14, :pie, "Apple"]
 [3.14, :pie, "Apple"]
@@ -140,7 +140,7 @@ list = [3.14, :pie, "Apple"]
 
 // Lists
 // Lists are simple collections of values which may include multiple types; lists may also include non-unique values:
-//  Good class is by using an integer ,  Atom and a string 
+//  Good class is by using an integer ,  Atom and a string
 [3.14, :pie, "Apple"]
 [3.14, :pie, "Apple"]
 
@@ -160,3 +160,28 @@ head
 3.14
 tail
 [:pie, "Apple"]
+
+// Enum
+
+// Functions for working with collections (known as enumerables).
+
+// In Elixir, an enumerable is any data type that implements the Enumerable protocol. Lists ([1, 2, 3]), Maps (%{foo: 1, bar: 2}) and Ranges (1..3) are common data types used as enumerables:
+
+Enum.map([1, 2, 3], fn x -> x * 2 end)
+[2, 4, 6]
+
+Enum.sum([1, 2, 3])
+6
+
+Enum.map(1..3, fn x -> x * 2 end)
+[2, 4, 6]
+
+Enum.sum(1..3)
+6
+
+map = %{"a" => 1, "b" => 2}
+Enum.map(map, fn {k, v} -> {k, v * 2} end)
+[{"a", 2}, {"b", 4}]
+Many other enumerables exist in the language, such as MapSets and the data type returned by File.stream!/3 which allows a file to be traversed as if it was an enumerable.
+
+For a general overview of all functions in the Enum module, see the Enum cheatsheet.
