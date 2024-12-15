@@ -69,7 +69,7 @@ for example ``def start(_type,_args) do`` we are not using the type and the args
 
 8 - Incase the list is too long , we can use the `count` function to count the outcome and give us a number for instance we can say `Enum.count odd` To give us the amount of odds returned.
 
-9 -  There is also the `sort` function that is used to sort the parameters according to your requirements and that is by `ascending order ` or `decending order ` E.g lets create a random list in our IEX :   `ul [123,511,133,421] and click on enter 
+9 -  There is also the `sort` function that is used to sort the parameters according to your requirements and that is by `ascending order ` or `decending order ` E.g lets create a random list in our IEX :   `ul [123,511,133,421]` and click on enter 
   - Once created we can go ahead and sort it out by running the command `Enum.sort ul` this will return ordered list of the ul function 
 
 ## TO READ MORE ABOUT Enum you can use this link [https://hexdocs.pm/elixir/Enum.html#content] 
